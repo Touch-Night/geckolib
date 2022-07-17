@@ -18,6 +18,8 @@ import software.bernie.geckolib3.geo.render.built.GeoVertex;
 import software.bernie.geckolib3.model.provider.GeoModelProvider;
 import software.bernie.geckolib3.util.RenderUtils;
 
+import java.awt.Color;
+
 public interface IGeoRenderer<T> {
 	default void render(GeoModel model, T animatable, float partialTicks, RenderLayer type, MatrixStack matrixStackIn,
 			VertexConsumerProvider renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn,
@@ -123,7 +125,7 @@ public interface IGeoRenderer<T> {
 
 	default Color getRenderColor(T animatable, float partialTicks, MatrixStack stack,
 			VertexConsumerProvider renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn) {
-		return Color.ofRGBA(255, 255, 255, 255);
+		return new Color(255, 255, 255, 255);
 	}
 
 	default Integer getUniqueID(T animatable) {
