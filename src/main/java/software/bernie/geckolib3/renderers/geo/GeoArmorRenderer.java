@@ -1,5 +1,6 @@
 package software.bernie.geckolib3.renderers.geo;
 
+import java.awt.Color;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.Objects;
